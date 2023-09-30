@@ -29,7 +29,17 @@ allprojects {
     configurations.all {
         resolutionStrategy.dependencySubstitution {
             // 远程依赖替换为本地项目
-//            substitute(module("group:artifactId")).using(project(":project"))
+            substitute(module("com.bennyhuo.kotlin:deepcopy-compiler-kcp-embeddable"))
+                .using(
+                    project(":kcp-impl:compiler-kcp-embeddable")
+                )
+            substitute(module("com.bennyhuo.kotlin:trimindent-compiler-embeddable"))
+                .using(
+                    project(":trimindent-compiler-embeddable")
+                )
         }
     }
 }
+
+project(":kcp-impl:compiler-kcp").group = "com.bennyhuo.kotlin"
+project(":trimindent-compiler").group = "com.bennyhuo.kotlin"

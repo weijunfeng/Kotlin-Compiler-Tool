@@ -2,8 +2,6 @@ plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
-    id("com.bennyhuo.kotlin.plugin.deepcopy") version "1.8.20.0"
-    id("com.bennyhuo.kotlin.trimindent") version "1.9.10-1.1.0"
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
@@ -17,6 +15,7 @@ kotlin {
             }
         }
     }
+    jvm()
     iosX64()
     iosArm64()
     iosSimulatorArm64()
@@ -26,9 +25,8 @@ kotlin {
         homepage = "Link to the Shared Module homepage"
         version = "1.0"
         ios.deploymentTarget = "14.1"
-        podfile = project.file("../iosApp/Podfile")
         framework {
-            baseName = "shared"
+            baseName = "KotlinDeepCopy_annotations"
         }
     }
 
@@ -36,8 +34,6 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 //put your multiplatform dependencies here
-                implementation(project(":annotations"))
-                implementation(project(":runtime"))
             }
         }
         val commonTest by getting {
@@ -49,7 +45,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.example.kotlin_compiler_tool"
+    namespace = "com.example.annotation"
     compileSdk = 33
     defaultConfig {
         minSdk = 24
