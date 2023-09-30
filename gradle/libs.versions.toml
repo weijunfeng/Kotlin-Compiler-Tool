@@ -1,0 +1,13 @@
+[versions]
+# build
+gradle = "8.1.2"
+kotlin = "1.9.10"
+buildconfig = "2.1.0"
+shadow = "8.1.1"
+
+[libraries]
+# build
+plugin-gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
+plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+plugin-buildconfig = { module = "com.github.gmazzo:gradle-buildconfig-plugin", version.ref = "buildconfig" }
+plugin-shadow = { module = "com.github.johnrengelman.shadow:com.github.johnrengelman.shadow.gradle.plugin", version.ref = "shadow" }
