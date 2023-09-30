@@ -1,0 +1,9 @@
+[submodule "KtIRTransformSample"]
+	path = KtIRTransformSample
+	url = https://github.com/androidZzT/KtIRTransformSample.git
+[submodule "Kotlin-Trim-Indent"]
+	path = Kotlin-Trim-Indent
+	url = https://github.com/bennyhuo/Kotlin-Trim-Indent.git
+[submodule "KotlinDeepCopy"]
+	path = KotlinDeepCopy
+	url = https://github.com/bennyhuo/KotlinDeepCopy.git
