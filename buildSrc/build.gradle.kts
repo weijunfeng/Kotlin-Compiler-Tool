@@ -1,8 +1,18 @@
+buildscript {
+    repositories {
+        google()
+        gradlePluginPortal()
+        mavenCentral()
+        mavenLocal()
+    }
+}
+
 plugins {
     `kotlin-dsl`
 //    id("org.gradle.kotlin.kotlin-dsl")
 //    kotlin("jvm")
     id("java-gradle-plugin")
+    id("com.github.gmazzo.buildconfig").version(libs.versions.buildconfig.get())
 }
 
 repositories {
@@ -46,6 +56,12 @@ gradlePlugin {
             description = "Gradle plugin for testing embeddable Kotlin compiler plugin"
             implementationClass = "com.bennyhuo.kotlin.plugin.embeddable.EmbeddableTestPlugin"
         }
+        create("MethodPerfIRPlugin") {
+            id = "com.kotlin.method.performance"
+            displayName = ""
+            description = ""
+            implementationClass = "com.methodpref.plugin.MethodPerfIRPlugin"
+        }
     }
 }
 
@@ -53,4 +69,8 @@ tasks.configureEach {
     if (this.name.contains("Test") || this.name.contains("test")) {
         this.enabled = false
     }
+}
+
+buildConfig {
+
 }

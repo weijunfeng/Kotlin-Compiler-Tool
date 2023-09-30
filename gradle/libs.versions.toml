@@ -11,3 +11,6 @@ plugin-gradle = { module = "com.android.tools.build:gradle", version.ref = "grad
 plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-buildconfig = { module = "com.github.gmazzo:gradle-buildconfig-plugin", version.ref = "buildconfig" }
 plugin-shadow = { module = "com.github.johnrengelman.shadow:com.github.johnrengelman.shadow.gradle.plugin", version.ref = "shadow" }
+
+[plugins]
+buildconfig-id = { id = "com.github.gmazzo.buildconfig", version.ref = "buildconfig" }

@@ -37,6 +37,10 @@ allprojects {
                 .using(
                     project(":trimindent-compiler-embeddable")
                 )
+            substitute(module("com.kotlin.method.performance:methodpref-compiler-embeddable"))
+                .using(
+                    project(":methodPerf-compiler-embeddable")
+                )
         }
     }
 }
