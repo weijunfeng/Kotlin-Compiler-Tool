@@ -4,3 +4,6 @@
 [submodule "KotlinDeepCopy"]
 	path = KotlinDeepCopy
 	url = https://github.com/bennyhuo/KotlinDeepCopy.git
+[submodule "kotlinpoet"]
+	path = kotlinpoet
+	url = https://github.com/square/kotlinpoet.git
